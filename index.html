@@ -51,11 +51,6 @@
         padding: 0 1em; /* Add padding for smaller screens */
       }
 
-      .title {
-        font-size: calc(6vw + 6vh); /* Responsive font size */
-        margin: 0;
-      }
-
       .contact-button {
         background-color: #171717;
         color: white;
@@ -77,12 +72,23 @@
         color: #171717;
       }
 
-      /* Media query for screens larger than 768px */
-      @media screen and (min-width: 769px) {
-        .title {
-          font-size: calc(10vw + 10vh); /* Increase font size for larger screens */
-        }
-      }
+      .title {
+  font-size: clamp(2em, 8vw, 5em); /* Adjust the minimum, preferred, and maximum sizes as needed */
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: clamp(1.5em, 18vw, 7em); /* Smaller screens get a smaller font size range */
+  }
+}
+
+/* Media query for screens larger than 768px */
+@media screen and (min-width: 769px) {
+  .title {
+    font-size: clamp(10em, 20vw, 20em); /* Larger screens can handle bigger text */
+  }
+}
     </style>
   </head>
   <body>
