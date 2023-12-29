@@ -5,7 +5,7 @@
     <link rel="icon" href="swiftmiller.ico" type="image/x-icon">
     <style>
       html {
-        height: 100%; /* Ensure html takes the full height */
+        height: 100%;
         margin: 0;
         padding: 0;
         display: flex;
@@ -19,18 +19,14 @@
         margin: 0;
         padding: 0;
         min-height: 100%;
-        background: linear-gradient(
-          to bottom,
-          #f0f8ff,
-          #cecece
-        ); /* Gradient background */
-        width: 100%; /* Ensures body takes full width */
+        background: linear-gradient(to bottom, #f0f8ff, #cecece);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
       }
+
       .contact-link {
         background-color: #171717;
         color: white;
@@ -41,8 +37,8 @@
         text-transform: uppercase;
         font-size: 1em;
         border-radius: 5px;
-        text-decoration: none; /* Removes underline from link */
-        display: inline-block; /* Allows padding and other box model properties */
+        text-decoration: none;
+        display: inline-block;
       }
 
       .container {
@@ -50,14 +46,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        flex-grow: 1;
         justify-content: center;
-        padding-left: 10em; /* Padding for 'S' */
-        padding-right: 10em; /* Padding for 'R' */
+        max-width: 90%; /* Set a maximum width for the container */
+        padding: 0 1em; /* Add padding for smaller screens */
       }
 
       .title {
-        font-size: calc(10vw + 10vh); /* Responsive font size */
+        font-size: calc(6vw + 6vh); /* Responsive font size */
         margin: 0;
       }
 
@@ -80,6 +75,13 @@
         bottom: 3em;
         font-size: 1em;
         color: #171717;
+      }
+
+      /* Media query for screens larger than 768px */
+      @media screen and (min-width: 769px) {
+        .title {
+          font-size: calc(10vw + 10vh); /* Increase font size for larger screens */
+        }
       }
     </style>
   </head>
