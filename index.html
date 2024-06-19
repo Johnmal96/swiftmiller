@@ -5,7 +5,7 @@
     <link rel="icon" href="swiftmiller.ico" type="image/x-icon">
     <style>
       html {
-        height: 100%; /* Ensure html takes the full height */
+        height: 100%;
         margin: 0;
         padding: 0;
         display: flex;
@@ -19,18 +19,14 @@
         margin: 0;
         padding: 0;
         min-height: 100%;
-        background: linear-gradient(
-          to bottom,
-          #f0f8ff,
-          #cecece
-        ); /* Gradient background */
-        width: 100%; /* Ensures body takes full width */
+        background: linear-gradient(to bottom, #f0f8ff, #cecece);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
       }
+
       .contact-link {
         background-color: #171717;
         color: white;
@@ -41,8 +37,8 @@
         text-transform: uppercase;
         font-size: 1em;
         border-radius: 5px;
-        text-decoration: none; /* Removes underline from link */
-        display: inline-block; /* Allows padding and other box model properties */
+        text-decoration: none;
+        display: inline-block;
       }
 
       .container {
@@ -50,15 +46,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        flex-grow: 1;
         justify-content: center;
-        padding-left: 10em; /* Padding for 'S' */
-        padding-right: 10em; /* Padding for 'R' */
-      }
-
-      .title {
-        font-size: calc(10vw + 10vh); /* Responsive font size */
-        margin: 0;
+        max-width: 90%; /* Set a maximum width for the container */
+        padding: 0 1em; /* Add padding for smaller screens */
       }
 
       .contact-button {
@@ -81,6 +71,24 @@
         font-size: 1em;
         color: #171717;
       }
+
+      .title {
+  font-size: clamp(2em, 8vw, 5em); /* Adjust the minimum, preferred, and maximum sizes as needed */
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: clamp(1.5em, 18vw, 7em); /* Smaller screens get a smaller font size range */
+  }
+}
+
+/* Media query for screens larger than 768px */
+@media screen and (min-width: 769px) {
+  .title {
+    font-size: clamp(10em, 20vw, 20em); /* Larger screens can handle bigger text */
+  }
+}
     </style>
   </head>
   <body>
@@ -88,6 +96,6 @@
       <div class="title">SwiftMiller</div>
       <a href="mailto:john@swiftmiller.com" class="contact-link">Contact Us</a>
     </div>
-    <div class="footer">© 2023 Swift Miller, LLC</div>
+    <div class="footer">© 2024 Swift Miller, LLC</div>
   </body>
 </html>
