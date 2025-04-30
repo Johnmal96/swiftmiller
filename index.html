@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SwiftMiller LLC - Your SEO Experts</title>
+    <title>SwiftMiller LLC</title>
+    <meta name="description" content="From software development to SEO and media relations, Swift Miller helps businesses thrive in the digital world.">
+    <meta name="keywords" content="SwiftMiller, software development, SEO, media relations, digital marketing, business growth">
+    
+    <meta property="og:title" content="Swift Miller, LLC">
+    <meta property="og:description" content="From software development to SEO and media relations, Swift Miller helps businesses thrive in the digital world.">
+    <meta property="og:image" content="https://swiftmiller.com/SwiftMiller-logo.jpg">
+    <meta property="og:url" content="https://swiftmiller.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Swift Miller, LLC">
+    <meta name="twitter:description" content="From software development to SEO and media relations, Swift Miller helps businesses thrive in the digital world.">
+    <meta name="twitter:image" content="https://swiftmiller.com/SwiftMiller-logo.jpg">
     <link rel="icon" href="swiftmiller.ico" type="image/x-icon">
+
     <style>
       html {
         height: 100%;
@@ -96,6 +110,14 @@
       <div class="title">SwiftMiller</div>
       <a href="mailto:john@swiftmiller.com" class="contact-link">Contact Us</a>
     </div>
-    <div class="footer">© 2025 Swift Miller, LLC</div>
+    <div class="footer">© <span id="current-year"></span> Swift Miller, LLC</div>
+
+  <script>
+    // Get the current year
+    const currentYear = new Date().getFullYear();
+    
+    // Set the current year in the footer
+    document.getElementById('current-year').textContent = currentYear;
+  </script>
   </body>
 </html>
